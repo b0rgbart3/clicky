@@ -1,8 +1,57 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Caveat+Brush&family=Shadows+Into+Light&display=swap');
+
 body {
-    background-color: black;
+    background-color: rgb(0, 24, 50);
 }
+
 header {
-    height:40px;
-    background-color:blue;
+    background-color:rgb(44, 44, 194);
+    color:white;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size:24px;
+    padding:20px;
+    text-align: center;
+    position:fixed;
+    width:100%;
+    box-sizing: border-box;
+    box-shadow:0 4px 12px rgb(0, 36, 63);
+    top:0;
+}
+
+.bigInstructions {
+    height:400px;
+    padding-top:160px;
+    background-size:100%;
+    background-repeat: no-repeat;
+    text-align:center;
+    color:white;
+    font-family: 'Bubblegum Sans', cursive;
+    /* background-image:url('images/background_texture1.jpg'); */
+}
+.bigInstructions h1 {
+    font-size:64px;
+    font-weight: bold;
+}
+.bigInstructions h2 {
+    margin-top:30px;
+    font-size:30px;
+}
+.instructions {
+ display:inline-block;
+
+}
+
+.logotype {
+    display:inline-block;
+    float:left;
+ 
+    margin:auto;
+}
+
+.score {
+    display:inline-block;
+    float:right;
+  
+    margin:auto;
 }
