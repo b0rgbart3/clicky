@@ -12,19 +12,15 @@ function Display(props) {
   }
   return (
       <div>
-        <div>
+        <div className="firstContainer">
           <Card name={props.data[0]} char={props.chars[0]}/>
           <Card name={props.data[0]} char={props.chars[1]} />
           <Card name={props.data[0]} char={props.chars[2]}/>
           <Card name={props.data[0]} char={props.chars[3]}/>
-        </div>
-        <div>
           <Card name={props.data[0]} char={props.chars[4]}/>
           <Card name={props.data[0]} char={props.chars[5]}/>
           <Card name={props.data[0]} char={props.chars[6]}/>
           <Card name={props.data[0]} char={props.chars[7]}/>
-        </div>
-        <div>
           <Card name={props.data[0]} char={props.chars[8]}/>
           <Card name={props.data[0]} char={props.chars[9]}/>
           <Card name={props.data[0]} char={props.chars[10]}/>
