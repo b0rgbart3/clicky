@@ -2,17 +2,16 @@ import React from "react";
 import "./style.css";
 
 function Card(props) {
-  let styles= {
-    headerStyle: {
-      width: '300px'
-    }
-  }
+
   return (
-    <div class="card"  style={styles.headerStyle}>
-    <img src="..." class="card-img-top" alt="..." />
+    <div class="card">
+    <div className="img-container">
+        <img alt={props.name} src={props.image} />
+      </div>
+      
     <div class="card-body">
         <h5 class="card-title">{props.name}</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">Something.</p>
         
     </div>
     </div>
@@ -24,3 +23,12 @@ export default Card;
 
 
 
+{/* <div class="card"  style={styles.headerStyle}> */}
+
+// let styles= {
+//   headerStyle: {
+//     width: '300px'
+//   }
+// }
+
+{/* <img src="..." class="card-img-top" alt="..." /> */}
