@@ -3,7 +3,7 @@ import "./style.css";
 import Wrapper from "./components/Wrapper";
 import Display from "./components/Display";
 let data=["1","2","3","4","5","6","7","8","9"];
-let chars=["bambam","barney","betty","boss","dino","dude","fred","gary","pebbles","pebbles2","perry","wilma"];
+
 function App(props) {
 
 //   let bigIBack = "/public/images/background_texture1.jpg";
@@ -14,6 +14,28 @@ function App(props) {
   }
 }
 
+
+let chars=["bambam","barney","betty","boss","dino","dude","fred","gary","pebbles","pebbles2","perry","wilma"];
+let availableChars = chars.slice(0);
+let newchars = [];
+function randomize_names() {
+  for (let i = 0; i < chars.length; i++) {
+      let randomChoice = Math.floor(Math.random() * chars.length);
+
+      // Make sure the random choice is available to choose
+      while (!availableChars.includes(chars[randomChoice])) {
+        randomChoice = Math.floor(Math.random() * chars.length);
+      }
+
+      let choiceIndex = availableChars.indexOf(chars[randomChoice])
+      availableChars.splice(choiceIndex,1);
+      newchars.push(chars[randomChoice]);
+    }
+}
+
+randomize_names();
+
+
   return (
     <div className="App">
       <div className="bigInstructions" style={styles.myback}>
@@ -21,7 +43,7 @@ function App(props) {
         <h2>Click on an image to earn points, but don't click on any more than once!</h2>
       </div>
       <Wrapper>
-         <Display data={data} chars={chars} />
+         <Display chars={newchars} />
       </Wrapper>
       <header className="App-header">
         <div className="logotype">Clicky Game</div>
