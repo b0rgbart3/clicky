@@ -4,14 +4,14 @@ import "./style.css";
 function Card(props) {
 
   return (
-    <div class="card">
+    <div className="card">
     <div className="img-container">
-        <img alt={props.name} src={props.image} />
+        <img alt={props.name} src={"images/chars/" + props.char + ".jpg"} />
       </div>
       
-    <div class="card-body">
-        <h5 class="card-title">{props.name}</h5>
-        <p class="card-text">Something.</p>
+    <div className="card-body">
+        <h5 className="card-title">{props.name}</h5>
+        <p className="card-text">Something.</p>
         
     </div>
     </div>
