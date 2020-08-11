@@ -1,0 +1,68 @@
+  [{
+    "id": 1,
+    "name": "bambam",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "image": "barney",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "image": "betty",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "name": "boss",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "image": "dino",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "image": "dude",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "name": "bambam",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "image": "fred",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "image": "gary",
+    "clicked": false
+  },
+  {
+    "id": 10,
+    "name": "pebbles",
+    "clicked": false
+  },
+  {
+    "id": 11,
+    "image": "pebbles2",
+    "clicked": false
+  },
+  {
+    "id": 12,
+    "image": "perry",
+    "clicked": false
+  },
+  {
+    "id": 13,
+    "image": "wilma",
+    "clicked": false
+  }
+  
+
+] 

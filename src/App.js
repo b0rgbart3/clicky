@@ -2,11 +2,10 @@ import React from "react";
 import "./style.css";
 import Wrapper from "./components/Wrapper";
 import Display from "./components/Display";
-let data=["1","2","3","4","5","6","7","8","9"];
+import data from "../../data.json";
 
 function App(props) {
 
-//   let bigIBack = "/public/images/background_texture1.jpg";
   let styles= {
   myback: {
     backgroundImage: `url(images/background_texture2.jpg)`,
