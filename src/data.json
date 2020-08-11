@@ -5,12 +5,12 @@
   },
   {
     "id": 2,
-    "image": "barney",
+    "name": "barney",
     "clicked": false
   },
   {
     "id": 3,
-    "image": "betty",
+    "name": "betty",
     "clicked": false
   },
   {
@@ -20,47 +20,42 @@
   },
   {
     "id": 5,
-    "image": "dino",
+    "name": "dino",
     "clicked": false
   },
   {
     "id": 6,
-    "image": "dude",
+    "name": "dude",
     "clicked": false
   },
   {
     "id": 7,
-    "name": "bambam",
+    "name": "fred",
     "clicked": false
   },
   {
     "id": 8,
-    "image": "fred",
+    "name": "gary",
     "clicked": false
   },
   {
     "id": 9,
-    "image": "gary",
-    "clicked": false
-  },
-  {
-    "id": 10,
     "name": "pebbles",
     "clicked": false
   },
   {
+    "id": 10,
+    "name": "pebbles2",
+    "clicked": false
+  },
+  {
     "id": 11,
-    "image": "pebbles2",
+    "name": "perry",
     "clicked": false
   },
   {
     "id": 12,
-    "image": "perry",
-    "clicked": false
-  },
-  {
-    "id": 13,
-    "image": "wilma",
+    "name": "wilma",
     "clicked": false
   }
   
