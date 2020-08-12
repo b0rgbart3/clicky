@@ -5,6 +5,7 @@ import { Component } from "react";
 import data from "../../data.json";
 import { render } from "@testing-library/react";
 import React, { useState, useEffect } from "react";
+import Shake from 'react-reveal/Shake';
 
 // make a duplicate of the array
 let availableData = data.slice(0);
@@ -32,15 +33,8 @@ class Game extends Component {
   }
 
 clicked = id => {
-  // find the object that has this id in the original full data set
-
-    //let dataObject = this.state.data.filter(char => char.id === id)[0];
-
-    // alternate method:
 
     let dataObject = this.state.data[id-1];
-
-   // console.log("Found object: " + dataObject);
  
     let newDataObject = [ dataObject ][0];
     if (!dataObject.clicked) { 
@@ -62,6 +56,11 @@ clicked = id => {
       this.state.score = 0;
       this.state.success = "no";
       this.state.instruction = "You guessed incorrectly!";
+      
+      let timer = setTimeout( () => { this.state.success="neutral";
+      this.setState({success: this.state.success});
+     } , 2000);
+      
 
       // reset all of the objects back to clicked = false
       this.state.data.map( objectData => {
@@ -101,13 +100,17 @@ render() {
   return <div className="wrapper">
        {/* Pass the data array and the new random sequence to the Display */}
   
+
+       <Shake when={this.state.success==="no"}>
+         <div>
        {data.map( (char ,i) => {
         //  console.log(char);
             return <Card dataObject={char} key={i} id={ char.id } 
             clickr={this.clicked} />
         }
           ) }
-      
+          </div>
+      </Shake>
        <header className="App-header">
         <div className="logotype">Clicky Game</div>
 
