@@ -15,3 +15,16 @@
     margin-top:10px;
     margin-bottom:150px;
 }
+
+.instructions-yes {
+  color:green;
+ 
+ }
+ .instructions-no {
+  color:red;
+ 
+ }
+ .instructions-not_yet {
+  color:white;
+ 
+ }
