@@ -14,12 +14,14 @@ let score = 0;
 let topscore = 0;
 let sequence = [];
 let randomSequence = [];
+let randomData = [];
 const originalData = [...data];
 
 class Game extends Component {
 
   state = {
     data: data,
+    randomData: data,
     sequence: sequence,
     score: score,
     topscore: topscore,
@@ -33,8 +35,15 @@ class Game extends Component {
   }
 
 clicked = id => {
+  // find the object that has this id in the original full data set
 
-    let dataObject = this.state.data[id-1];
+    let dataObject = this.state.data.filter(char => char.id === id)[0];
+
+    // alternate method:
+
+//    let dataObject = this.state.data[id-1];
+
+   // console.log("Found object: " + dataObject);
  
     let newDataObject = [ dataObject ][0];
     if (!dataObject.clicked) { 
@@ -44,6 +53,8 @@ clicked = id => {
       console.log("Score: " + this.state.score);
       this.state.success = "yes";
       console.log("ID: " + dataObject.id);
+
+
       this.state.data[dataObject.id-1] = newDataObject;
       console.log(this.state.data);
       this.state.instruction = "You guessed correctly!";
@@ -78,21 +89,41 @@ clicked = id => {
 chooseNextOrder() {
   // build up a randomSequence of unique #s
   randomSequence = [];
+  randomData = [];
 
   // loop through the data -- because this is how many
-  // random indexes we need -- to build an array of random #s
- // data.map( () => {
+  // random indexes we need -- to shuffle all the object for display purposes
 
-    //   // Choose a random index
-    //   let randomChoice = Math.floor(Math.random() * data.length);
-      
-    //   // Until we have a unique one, keep choosing another random #
-    //   while (!randomSequence.includes(randomChoice)) {
-    //     randomChoice = Math.floor(Math.random() * data.length);
-    //    }
-    //   // Once we have a new random #, we can add it to our array
-    //    randomSequence.push(randomChoice);
-    // })
+data.map( () => {
+
+//       // Choose a random index
+      let randomChoice = Math.floor(Math.random() * (data.length));
+      randomChoice = randomChoice + 1;
+       console.log("randomChoice: " + randomChoice);
+//       // Until we have a unique one, keep choosing another random #
+   while (randomSequence.includes(randomChoice)) {
+        randomChoice = Math.floor(Math.random() * data.length);
+        randomChoice = randomChoice + 1;
+      }
+//       // Once we have a new random #, we can add it to our array
+       
+        randomSequence.push(randomChoice);
+        let foundObject = data.filter(obj => obj.id === randomChoice);
+
+        console.log("Found: " + JSON.stringify(foundObject ));
+        console.log(randomSequence);
+
+        randomData = [...randomData, ...foundObject ];
+
+        console.log("randomData Length: " + randomData.length);
+        
+        
+    })
+   //  console.log("Random sequence: " + JSON.stringify( randomData ));
+    console.log(randomData.length);
+   // console.log(data);
+    randomData.map( (obj) => console.log(obj) );
+    this.setState({randomData: randomData});
 }
 
 
@@ -103,7 +134,8 @@ render() {
 
        <Shake when={this.state.success==="no"}>
          <div>
-       {data.map( (char ,i) => {
+
+       {this.state.randomData.map( (char ,i) => {
         //  console.log(char);
             return <Card dataObject={char} key={i} id={ char.id } 
             clickr={this.clicked} />
