@@ -1,68 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Clicky
+A visual memory-test game built with React.
 
-## Available Scripts
+![screenshot](screenshot.png)
+# Table of contents
+- [Clicky](#clicky)
+- [Table of contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Live Demo](#live-demo)
+  - [License](#license)
+  - [Features](#features)
+  - [Technology](#technology)
+  - [User Story](#user-story)
+  - [Badges](#badges)
+<a name="Installation"></a>
+## Installation
+```sh
+npm start
+```
+<a name="Usage"></a>
+## Usage
+```sh
+npm start
+```
+<a name="Live_Demo"></a>
+## Live Demo
+url_here
+<a name='License'></a>
+## License
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+<a name="Features"></a>
+## Features
+1. Dynamically generated components
+2.  state management
+3.  dependency injection
+<a name="Technology"></a>
+## Technology
+1. React
+2.  Bootstrap
 
-In the project directory, you can run:
+<a name="User_Story"></a>
+## User Story
+```sh
+Anyone who wants to test their visual memory will have fun playing this game
+```
 
-### `npm start`
+<a name="Badges"></a>
+## Badges
+ [![Generic badge](https://img.shields.io/badge/made_with-React-<COLOR>.svg)](https://shields.io/)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**on github:** <a href='github.com/b0rgBart3'>b0rgBart3</a>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+[![](https://github.com/b0rgBart3.png?size=90)](https://github.com/remarkablemark)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Email: borgBart3@gmail.com

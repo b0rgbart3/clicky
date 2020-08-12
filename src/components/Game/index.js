@@ -83,7 +83,7 @@ clicked = id => {
     this.setState({ data: this.state.data, score: this.state.score,
     success: this.state.success, topscore: this.state.topscore });
      console.log(this.state.data);
-
+      this.chooseNextOrder();
   }
 
 chooseNextOrder() {
