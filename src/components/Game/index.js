@@ -13,9 +13,7 @@ let score = 0;
 let topscore = 0;
 let sequence = [];
 let randomSequence = [];
-
-
-
+const originalData = [...data];
 
 class Game extends Component {
 
@@ -27,6 +25,7 @@ class Game extends Component {
     success: "not_yet",
     instruction: "Click an image to begin!"
   };
+
 
   componentDidMount() {
     this.chooseNextOrder();
@@ -56,14 +55,24 @@ clicked = id => {
       this.state.instruction = "You guessed correctly!";
       //console.log("Changing this to clicked: " + JSON.stringify(dataObject));
     } else {
+      if (this.state.score > this.state.topscore) {
+        console.log("Setting top score to : "+ this.state.score);
+        this.state.topscore = this.state.score;
+     }
       this.state.score = 0;
       this.state.success = "no";
       this.state.instruction = "You guessed incorrectly!";
+
+      // reset all of the objects back to clicked = false
+      this.state.data.map( objectData => {
+        objectData.clicked = false;
+      })
+     
     }
 
     this.setState({ data: this.state.data, score: this.state.score,
-    success: this.state.success  });
-
+    success: this.state.success, topscore: this.state.topscore });
+     console.log(this.state.data);
 
   }
 
@@ -105,7 +114,7 @@ render() {
         <div className={`instructions instructions-${this.state.success}`} 
         
         >{ this.state.instruction }</div>
-        <div className="score">Score: { this.state.score }  |   Top Score: { topscore }</div>
+        <div className="score">Score: { this.state.score }  |   Top Score: { this.state.topscore }</div>
       </header>
   </div>
 }
